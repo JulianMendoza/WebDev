@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="assignment1.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Share Your Travels</h1>
+        <p>let us know where you've been</p>
+    </header>
+    <main>
+        <section>
+            <legend>Photo details</legend>
+            <fieldset>
+                <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+                    <p>Title</br>
+                        <input type="text" name="title" placeholder="Give your title a descriptive name" />
+                        </br>
+                    </p>
+                    <p>Description
+                        <textarea placeholder="Adding a rich description will help with search results" name="description"></textarea>
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Continent</td>
+                            <td rowspan=3 class="bordered-table">Copyright?</br>
+                                <input type="radio" name="copyright" value="1">All rights reserved</br>
+                                <input type="radio" name="copyright" value="2">Creative Commons
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="continent">
+                                    <option disabled selected>Choose a continent</option>
+                                    <option>North America</option>
+                                    <option>Asia</option>
+                                    <option>Africa</option>
+                                    <option>Europe</option>
+                                </select>
+                            </td>
+                            <tr>
+                                <td>Country</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="country">
+                                        <option disabled selected>Choose country</option>
+                                        <option>Canada</option>
+                                        <option>United States</option>
+                                        <option>China</option>
+                                        <option>England</option>
+                                    </select>
+                                </td>
+                                <td rowspan=4 class="bordered-table">Creative Commons Types</br>
+                                    <input type="checkbox" name="cc[]" value="1">Attribution</br>
+                                    <input type="checkbox" name="cc[]" value="2">Noncommercials</br>
+                                    <input type="checkbox" name="cc[]" value="3">No Derivative Works
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="city" id="city">
+                                </td>
+                            </tr>
+                    </table>
+                    <p class="legend-background">I accept the software license
+                        <input type="checkbox" name="accept" id="license">
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Rate this photo
+                                <td>
+                                    <td rowspan=4 class="bordered-table">Date Taken:</br>
+                                        <input type="date" name="date">
+                                        </br>
+                                        Time taken:</br>
+                                        <input type="time" name="time">
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" name="rate" id="number">
+                                <td>
+                        </tr>
+                        <tr>
+                            <td>Color Collection:</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="color" name="color">
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="legend-background">
+                        <button type="submit" value="Submit" class="formbutton">Submit</button>
+                        <button type="reset" value="Reset" class="formbutton">Clear Form</button>
+                    </p>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+</body>
+
+</html>
