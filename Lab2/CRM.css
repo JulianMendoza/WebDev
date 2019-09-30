@@ -1,0 +1,126 @@
+
+html{
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+li a{
+  color:#3987c9;
+}
+p{
+  border: 1px solid #000;
+}
+body{
+  background-color:	#F0F8FF;
+}
+header {
+  color: white;
+  background-color: #213643;
+  background-image:url("images/header-background.png");
+}
+footer{
+  color: white;
+  background-color: #213643;
+}
+nav {
+  background-color: #728B96;
+   padding: 0em;
+}
+nav ul li {
+   list-style: none;
+   display: inline;
+   padding:0px 1px 0px 0px;
+}
+#mainMenu{
+  background-color: #213643;
+  text-align:right;
+  font-size:14px;
+  padding-right:50px;
+}
+h1{
+  font-size:20px;
+  padding-left:50px
+}
+h1 span{
+  color:#FFA500;
+}
+#secondaryMenu{
+  text-align:left;
+  padding-left:10px;
+}
+#mainContact{
+  padding-right:50px;
+  padding-left:50px;
+}
+div{
+  text-align:center;
+  background-color:white;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+div img{
+  padding:3px 3px 3px 3px;
+  border: 1px solid #000;
+}
+section h3{
+  color:white;
+  background-color:#213643;
+  padding: 5px 5px 5px 5px;
+
+}
+section p{
+  background-color:white;
+  padding-bottom:5px;
+}
+section em{
+  color:grey;
+}
+div.actions{
+  margin-bottom:10px;
+  background-color:#6495ED;
+  text-align:left;
+
+}
+div.actions li{
+  list-style: none;
+  display: inline;
+}
+a.actionFlag{
+  background-color:#FFA500;
+  text:white;
+  padding-left:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-right:10px;
+  background-image:url("images/flag.png");
+  background-repeat:no-repeat;
+}
+a.actionEdit{
+  background-color:#FFA500;
+  padding-left:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-right:10px;
+  background-image:url("images/edit.png");
+  background-repeat:no-repeat;
+}
+div ul li a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+ figure{
+  max-width:100%;
+  max-height:100%
+  height:auto;
+  border: 1px solid #000;
+
+}
+footer{
+  padding-left:50px;
+  margin-bottom:100px;
+}
+footer a{
+  color:blue;
+}
+nav:hover{
+  background-color:#7f5200;
+}
