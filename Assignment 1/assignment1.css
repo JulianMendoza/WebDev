@@ -103,6 +103,9 @@
      width: 100px;
      text-align:center;
 }
+.formbutton:hover{
+  cursor:pointer;
+}
  #number{
      width:44px;
 }
