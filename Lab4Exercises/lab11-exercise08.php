@@ -25,7 +25,7 @@
 <tr>
   <th>milliliters</th><th>Cups</th><th>Ounces</th>
 <?php
-for ($i=50;$i<=1000;$i+=50) {
+for($i=50;$i<=1000;$i+=50) {
     echo "<tr>";
     echo "<td>$i</td>";
     // replace the ??? with the calls to convertUnits function
