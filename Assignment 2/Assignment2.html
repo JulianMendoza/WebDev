@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />        
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    
+
+    <script src="js/images.js"></script>
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js"> 
+	<script type=“text/javascript”> 
+	window.jQuery ||
+	document.write(`<script src=“/jquery-3.1.0.min.js”><\/script>`); 
+	</script> 
+
+
+</head>
+
+<body>
+    <header>
+        <div class="topHeaderRow">
+            <div class="container">
+                <div class="pull-right">
+                    <ul class="list-inline">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end topHeaderRow -->
+
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Share Your Travels</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Countries</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li><a href="#">Posts</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- /.navbar-collapse -->
+
+
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    
+
+
+    <!-- Page Content -->
+    <main class="container">     
+		<ul class="gallery">
+		</ul>    
+      
+    </main>
+    
+    
+    
+    <footer>
+        <div class="container-fluid">
+                    <div class="row final">
+                <p>Copyright &copy; 2017 Creative Commons ShareAlike</p>
+                <p><a href="#">Home</a> / <a href="#">About</a> / <a href="#">Contact</a> / <a href="#">Browse</a></p>
+            </div>            
+        </div>        
+    </footer>  
+<!-- My answer here -->
+<!-- Julian Mendoza 101067270-->
+	<script>
+		//Looping through the images via the json parse.
+	   for(var i=0;i<images.length;i++){
+		//appending to the class gallery with a new tag created via jQuery note that the title and path can be called from the objects of the array
+		$(".gallery").append($("<img alt=\""+images[i].title+"\"src =\"images/square/"+images[i].path+"\">"));
+	   }
+		//mouseenter Event
+		$("img").mouseenter(function(event){
+			//make the img grayscale by adding the class gray
+			$(this).attr(`class`,`gray`);
+			//loop through the images to determine which image is being entered
+			for(var i=0;i<images.length;i++){
+			//if the image alt attribute is equal to the title, create a new JQuery object
+			if($(this).attr(`alt`)==images[i].title){
+				var popup=$("<div id=\"preview\"><img alt=\""+images[i].title+"\"src =\"images/medium/"+images[i].path+"\"><p>"+images[i].title+"</br><i>"+images[i].city+", " +images[i].country+" ["+images[i].taken+"]</i></p>");
+				//no need to loop through the loop so break
+				break;
+			}
+			}
+			$("body").append(popup);
+			//add a top and left attribute to the preview class, offset so the cursor can move freely without any flickering of being on/off image
+			$("#preview").css("top",event.pageY+25);
+			$("#preview").css("left",event.pageX-50);
+			//display the new popup
+			$("#preview").css("display","inherit");
+		
+	   });
+		//mouseleave Event
+		$("img").mouseleave(function(){
+			//remove the class attribute from the img
+			$(this).removeAttr(`class`);
+			//remove any tags with a preview id
+			$("#preview").remove();
+	   });
+		//mousemouse Event
+		$("img").mousemove(function(event){
+			//change the existing top/left css values of preview with respect to the cursor
+			$("#preview").css("top",event.pageY+25);
+			$("#preview").css("left",event.pageX-50);
+	   });
+	</script>
+</body>
+</html>
