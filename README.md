@@ -24,3 +24,35 @@ Labs are done in a restricted 3 hour time-frame.
 <p align="center">
 <img src="Images/assignment.png" height="50%" width="50%">
  </p>
+
+## Lab 3
+* Use JavaScript to populate the respective country information
+* Understanding of objects and DOM using JS
+
+<p align="center">
+<img src="Images/Lab3.png" height="75%" width="75%">
+ </p>
+ 
+ ## Assignment 2
+* Use JQuery and a JSON file to populate the images
+* Event-handling to produce a gray-scale image on the hovered image and produce a div with a larger version 
+
+<p align="center">
+<img src="Images/Assignment2.png" height="50%" width="50%">
+ </p>
+ 
+ ## Lab 4
+* Use PHP to create a color palette using an iterator variable
+* Use XAMP to create a server st. php can generate the respective html
+
+<p align="center">
+<img src="Images/Lab4.png" height="75%" width="75%">
+ </p>
+ 
+ ## Lab 5
+ * Use PHP to work with a SQL database (MariaDB)
+ * Server created using XAMP 
+ 
+ <p align="center">
+<img src="Images/Lab5.png" height="75%" width="75%">
+ </p>
