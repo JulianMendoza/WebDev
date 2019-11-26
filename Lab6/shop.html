@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Welcome to Shopper's Paradise</title>
+	<meta charset="utf-8" />
+</head>
+<!--
+Styling for the form input, form uses variables item and amount in showCart.php
+Bad Design: User can enter numbers and text for both areas, even if it is invalid
+-->
+<body>
+	<h1>Shopper's Paradise</h1>
+	<form action='showCart.php' method='post'>
+		<div>
+			<label>What would you like to buy?</label></br>
+			<input type='text' name='item' />
+		</div>
+		</br>
+		<div>
+			<label>How many items would you like to buy?</label></br>
+			<input type='text' name='amount' />
+		</div>
+		</br>
+		<input type='submit' value='Add item to shopping cart' />
+	</form>
+
+</body>
+
+</html>
